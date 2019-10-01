@@ -1,8 +1,12 @@
 {
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "@storybook/addon-info": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
     "@storybook/react": "^5.2.1",
-    "babel-loader": "^8.0.0-beta.6"
+    "babel-loader": "^8.0.0-beta.6",
+    "prettier": "^1.18.2",
+    "storybook-addon-jsx": "^7.1.6"
   },
   "dependencies": {
     "react": "^16.9.0",
