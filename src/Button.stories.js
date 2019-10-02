@@ -12,7 +12,7 @@ import {text, color} from "@storybook/addon-knobs";
 //         text: `> markdown supported text`
 // }
 storiesOf("Button", module)
-  .addWithJSX("Red Background", ()=> <Button bg={color('bg', 'red', "group1")}>Red button</Button>, {
+  .addWithJSX("Red Background", ()=> <Button bg={color('bg', 'red', "color")}>{text("text", "Text", "text")}</Button>, {
       info: `
           description or documentation about my component, supports markdown
         `
