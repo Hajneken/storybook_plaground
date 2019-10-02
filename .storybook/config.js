@@ -1,12 +1,14 @@
-import { configure, setAddon } from "@storybook/react";
+import {addDecorator, configure, setAddon} from "@storybook/react";
 
 import JSXAddon from 'storybook-addon-jsx';
 import {withInfo} from "@storybook/addon-info";
+import { withKnobs } from '@storybook/addon-knobs/react';
 
 //pair together setAddon with JSXAddon
 setAddon(JSXAddon);
 
 addDecorator(withInfo);
+addDecorator(withKnobs);
 
 // looks through everything in src and uses regex for everything that ends with .stories.js
 const req = require.context("../src", true, /.stories.js$/);

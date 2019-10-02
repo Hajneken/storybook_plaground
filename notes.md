@@ -25,11 +25,34 @@ Install [yarn](https://yarnpkg.com)
 2. In `/src` create React component and stories
     > `name.js` and `name.stories.js`
 3. In stories use `storiesOf()` and `add()` as described below 
-> ```JSX    
-> storiesOf('ComponentName', module).add('Red Background', () => (<ComponentName bg={"red"}>Red Component</ComponentName>));``` 
+
+ ```JavaScript 
+storiesOf('ComponentName', module)
+  .add('Descriptive name',
+  () => (<ComponentName  bg={"red"}>Red Component</ComponentName>));
+ ``` 
 
 - in `add(arg1, arg2)` 
-    - arg1 is brief used in storybook
+    - arg1 is brief description used in storybook
     - arg2 is an instance of your component 
     
 > if you want to also see JSX, instead of `add` use `addWithJSX()`
+
+## Addons 
+> all addons need to be imported to `/.storybook/addons.js` and configured `/.storybook/config.js` except `withInfo()` used for automated documentation generator
+
+### Installed addons 
+* jsx
+* info
+* knobs 
+
+### JSX 
+> allows developer to see formatted code 
+
+### Info
+> automatically generates documentation with an option to style the documentation and add additional markdown 
+
+### Knobs
+> allows developer to test component states in real time 
+> e.g. providing colors via colorpicker, text, files etc.
+options listed in [documentation](https://github.com/storybookjs/storybook/tree/master/addons/knobs)

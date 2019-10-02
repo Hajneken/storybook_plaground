@@ -2,12 +2,19 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { Button } from "./Button";
+import {withInfo} from "@storybook/addon-info";
+import {text, color} from "@storybook/addon-knobs";
 
 // we declare a new Button story within the current module
 // then we add() it with desription and callback which is JSX instance of our component
+// {
+//     info: "test",
+//         text: `> markdown supported text`
+// }
 storiesOf("Button", module)
-  .add("Red Background", () => <Button bg="red">Red button</Button>, {
-    info: "test",
-    text: `> markdown supported text`
+  .addWithJSX("Red Background", ()=> <Button bg={color('bg', 'red', "group1")}>Red button</Button>, {
+      info: `
+          description or documentation about my component, supports markdown
+        `
   })
-  .add("Blue Background", () => <Button bg="blue">Blue Button</Button>);
+  .addWithJSX("Blue Background", () => <Button bg="blue">Blue Button</Button>);
