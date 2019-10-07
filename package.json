@@ -10,8 +10,10 @@
     "storybook-addon-jsx": "^7.1.6"
   },
   "dependencies": {
+    "@storybook/cli": "^5.2.3",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "storybook-addon-code": "^0.1.4"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006 -c .storybook"
