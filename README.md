@@ -1,4 +1,4 @@
-# Storybook plaground 
+# Storybook playground 
 
 Guide to how to set up your own storybook from scratch 
 
